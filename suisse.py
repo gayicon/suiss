@@ -16,7 +16,12 @@ countries_data = {
 fig = px.choropleth(locations=countries_data['Country'], 
                     color=countries_data['War with Switzerland'], 
                     locationmode='country names', 
-                    title='Countries that Have Been at War with Switzerland')
+                    title='Countries that Have Been at War with Switzerland',
+                    hover_name=countries_data['Country'])  # Add country names on hover
+
+# Add country names as labels
+fig.update_geos(showcoastlines=True, coastlinecolor="Black", projection_type="mercator")
+fig.update_traces(text=countries_data['Country'], textposition="top center", marker=dict(line=dict(width=0)))
 
 # Streamlit app
 st.title('Interactive Map of Countries at War with Switzerland')
