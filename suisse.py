@@ -3,7 +3,8 @@ import plotly.express as px
 
 # List of countries at war with Switzerland
 countries_at_war_with_switzerland = [
-    "France", "Austria", "Italy", "Germany", "Spain", "Netherlands", "Sweden"
+    "France", "Austria", "Italy", "Germany", "Spain", "Netherlands", "Sweden",
+    "Russia", "Portugal", "Turkey"
 ]
 
 # Manually defined latitude and longitude for countries
@@ -15,6 +16,9 @@ coordinates = {
     "Spain": (40.463667, -3.74922),
     "Netherlands": (52.3676, 4.9041),
     "Sweden": (60.128161, 18.643501),
+    "Russia": (55.7558, 37.6176),  # Moscow coordinates
+    "Portugal": (39.399872, -8.224454),  # Lisbon coordinates
+    "Turkey": (38.963745, 35.243322),  # Coordinates for Turkey (Ankara)
 }
 
 # Create the map using Plotly Express
